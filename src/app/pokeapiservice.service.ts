@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +40,10 @@ export class PokeapiserviceService {
     return this.getTypePokemons(TypePokemon.Electric);
   }
   getRockPokemons(){
-    return this.getTypePokemons(TypePokemon.Electric);
+    return this.getTypePokemons(TypePokemon.Rock); //cambio en la linea de .Electric a .Rock
+  }
+  getWaterPokemons(){
+    return this.getTypePokemons(TypePokemon.Water); //agrego getWaterPokemons
   }
 
   getPokemon(id : number){
@@ -49,7 +52,7 @@ export class PokeapiserviceService {
 
 }
 
-enum TypePokemon {
+export enum TypePokemon {
   Fire = 10,
   Electric = 13,
   Rock = 6,

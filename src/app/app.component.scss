@@ -1,0 +1,17 @@
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .pokemon-card {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
